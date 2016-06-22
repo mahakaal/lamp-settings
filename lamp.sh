@@ -59,7 +59,7 @@ echo "\n\tAdding your $USER to www-data group"
 
 adduser $USER www-data
 
-echo "\n\tChaninging owner of /var/wwww to www-data"
+echo "\n\tChanging owner of /var/wwww to www-data"
 
 chown $USER:www-data -R /var/www
 
