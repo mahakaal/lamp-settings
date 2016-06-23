@@ -3,9 +3,17 @@
 This is just a simple script to automate the installing of LAMP.
 Pretty basic stuff nothing extraordinary. Make sure you have read every line of it.
 
-** _I'M NOT RESPONSIBLE IF ANY HARMS IS DONE._ **
+**_I'M NOT RESPONSIBLE IF ANY HARMS IS DONE._**
 
-## How does the script work
+## Usage
+
+Two ways:
+- Add +x with chmod to the script and then give 
+  `./lamp`
+- Or 
+  `sudo sh lamp.sh`
+
+## How does the script works
 
 **It needs sudo, be carefull.**
 
