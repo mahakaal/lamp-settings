@@ -67,6 +67,12 @@ echo "\n\tGiving Execute permission"
 
 chmod u=rwX,g=srX,o=rX -R /var/www
 
+echo "Finalizing installation.. \n Securing Apache\n"
+echo "Please change Listen 80 to Listen 127.0.0.1:80 in the file about to be open.\nPlease save and close the file afterwards for the installation to continue\n\n"
+read -rsp $ "UNDERSTOOD? (press any key)" -n1 key
+nano /etc/apache2/ports.conf
+
+echo "Creating test page."
 echo "<?php \n phpinfo();" > /var/www/html/test.php
 echo "\nCreated phpinfo() test file in /var/www/html/test.php";
 
