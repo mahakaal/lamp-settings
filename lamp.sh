@@ -16,6 +16,10 @@ if [ "$ans" = "n" ] || [ "$ans" = "N" ]; then
 	exit 0
 fi
 
+#getting username
+username=$USER;
+
+sudo -s <<EOF
 echo "Checking for permissions.."
 
 if [ $(whoami) != "root" ]; then
@@ -55,13 +59,13 @@ echo "\nInstalling common PHP features (php-all-dev php-cgi php-cli php-common p
 apt-get install php-all-dev php-cgi php-cli php-common php-curl php-dev php-gd
 
 echo "\n/var/www Permission settings..."
-echo "\n\tAdding user: $USER to www-data group"
+echo "\n\tAdding user: $username to www-data group"
 
-adduser $USER www-data
+adduser $username www-data
 
 echo "\n\tChanging owner of /var/wwww to www-data"
 
-chown $USER:www-data -R /var/www
+chown $username:www-data -R /var/www
 
 echo "\n\tGiving Execute permission"
 
@@ -77,6 +81,11 @@ echo "<?php \n phpinfo();" > /var/www/html/test.php
 echo "\nCreated phpinfo() test file in /var/www/html/test.php";
 
 echo "Please open your browser and go to localhost/test.php, you should see a phpinfo page else something went wrong so try installing manually."
+
+#exiting root permission
+exit;
+EOF
+
 
 echo "\n\n\t\t\t End Installation\nThank you for using this utility."
 
