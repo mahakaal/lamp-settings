@@ -38,6 +38,6 @@ Two ways:
 
 If you don't like any of these just edit the script.
 
-*There's a trick I've inserted for script kiddies to get harm, so untill you don't read and fully understand the code it will not work. It's a simple thing, you just need to know some basic stuff.* .
+**_There's a trick I've inserted to prevent script kiddies from getting harmed, so untill you don't read and fully understand the code, it will not work. It's a simple thing, you just need to know some basic stuff._** Thanks for understanding.
 ## Hope this is usefull to someone. Enjoy.
 
